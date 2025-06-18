@@ -1,0 +1,43 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "port": 443,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "5c1a1d57-28f2-42b2-b731-4fcf8c2415f9",
+            "flow": "xtls-rprx-vision"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "certificates": [
+            {
+              "certificateFile": "/etc/ssl/cert.pem",
+              "keyFile": "/etc/ssl/key.pem"
+            }
+          ]
+        },
+        "wsSettings": {
+          "path": "/v2ray",
+          "headers": {
+            "Host": "railway-xray-production-94a2.up.railway.app"
+          }
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
+}
