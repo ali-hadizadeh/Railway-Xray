@@ -1,3 +1,5 @@
-cat << EOF > /xray.json
-...
-EOF
+# cat << EOF > /xray.json
+# {
+#   ...
+# }
+# EOF
